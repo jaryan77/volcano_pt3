@@ -1,0 +1,23 @@
+var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+      
+      // this could also be "line, pie etc"
+      type: 'line',
+        data: {
+          labels: record,
+            datasets: [{
+                label: 'Eruptions by Country',
+                data: record.count(),
+                backgroundColor: 'transparent',
+                borderColor: 'red',
+                borderWidth: 3,
+            },
+            {
+                label: 'Elevations',
+                data: elevation,
+                backgroundColor: 'transparent',
+                borderColor: 'green',
+                borderWidth: 3,
+                
+            }]
+        },
